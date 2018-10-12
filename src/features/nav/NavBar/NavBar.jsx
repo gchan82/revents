@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Menu, Container, Button } from 'semantic-ui-react';
 
-export class NavBar extends Component {
+class NavBar extends Component {
   render() {
     return (
       <Menu inverted fixed="top">

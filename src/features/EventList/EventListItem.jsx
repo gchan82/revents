@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Segment, Item, Icon, List, Button } from 'semantic-ui-react';
 import EventListAttendee from './EventListAttendee';
 
-class EventListItem extends Component {
+export class EventListItem extends Component {
   render() {
     return (
       <Segment.Group>
@@ -27,8 +27,6 @@ class EventListItem extends Component {
         </Segment>
         <Segment secondary>
           <List horizontal>
-            <EventListAttendee />
-            <EventListAttendee />
             <EventListAttendee />
           </List>
         </Segment>
