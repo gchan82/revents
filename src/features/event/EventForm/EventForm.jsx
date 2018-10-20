@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { reduxForm, Field } from "redux-form";
 import cuid from "cuid";
 import { Segment, Form, Button } from "semantic-ui-react";
 import { createEvent, updateEvent } from "../eventActions";
@@ -37,7 +38,7 @@ export class EventForm extends Component {
     evt.preventDefault();
     if (this.state.event.id) {
       this.props.updateEvent(this.state.event);
-      this.props.history.goBack(); 
+      this.props.history.goBack();
     } else {
       const newEvent = {
         ...this.state.event,
@@ -45,7 +46,7 @@ export class EventForm extends Component {
         hostPhotoURL: "/assets/user.png"
       };
       this.props.createEvent(newEvent);
-      this.props.history.push('/events')
+      this.props.history.push("/events");
     }
   };
 
@@ -62,15 +63,7 @@ export class EventForm extends Component {
     return (
       <Segment>
         <Form onSubmit={this.onFormSubmit}>
-          <Form.Field>
-            <label>Event Title</label>
-            <input
-              name="title"
-              onChange={this.onInputChange}
-              value={event.title}
-              placeholder="Event Title"
-            />
-          </Form.Field>
+          <Field name="title" type="text" component="input" placeholder='Event Title' />
           <Form.Field>
             <label>Event Date</label>
             <input
@@ -122,4 +115,4 @@ export class EventForm extends Component {
 export default connect(
   mapState,
   actions
-)(EventForm);
+)(reduxForm({ form: "eventForm" })(EventForm));
