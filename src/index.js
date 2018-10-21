@@ -1,3 +1,5 @@
+//googleAPIkey:AIzaSyBJpX7EGnBhTC7GNcZOaZzHtnxw6GBu8fA
+
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
