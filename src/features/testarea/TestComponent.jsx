@@ -60,7 +60,6 @@ export class TestComponent extends Component {
           {this.state.scriptLoaded && (
             <PlacesAutocomplete inputProps={inputProps} />
           )}
-          <PlacesAutocomplete inputProps={inputProps} />
           <button type="submit">Submit</button>
         </form>
       </div>
