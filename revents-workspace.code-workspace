@@ -1,8 +1,11 @@
 {
-  "folders": [
-    {
-      "path": "C:\\Users\\Gary\\project\\react-recipes"
-    }
-  ],
-  "settings": {}
+"folders": [
+	{
+		"path": "."
+	}
+],
+  "settings": {
+    "editor.fontFamily": "Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true
+  }
 }
