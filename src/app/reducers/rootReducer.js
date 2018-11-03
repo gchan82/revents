@@ -10,7 +10,7 @@ const rootReducer = combineReducers({
   test: testReducer,
   events: eventReducer,
   modals: modalsReducer,
-  auth: authReducer
+  auth: authReducer,
   async: asyncReducer
 });
 
